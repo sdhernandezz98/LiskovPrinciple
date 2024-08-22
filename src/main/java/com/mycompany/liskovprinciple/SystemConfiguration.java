@@ -10,7 +10,7 @@ package com.mycompany.liskovprinciple;
  */
  
 
-public class SystemConfiguration implements PersistentResource {
+public class SystemConfiguration implements PersistentResource, Notificable {
     @Override
     public void load() {
         System.out.println("Configuración sistema cargada");
@@ -19,6 +19,10 @@ public class SystemConfiguration implements PersistentResource {
     @Override
     public void save() {
         System.out.println("Configuración sistema almacenada");
+    }
+    @Override
+    public void notificar() {
+        System.out.println("Notificación: Configuración sistema ha sido actualizada.");
     }
 }
 

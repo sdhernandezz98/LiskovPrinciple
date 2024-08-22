@@ -8,7 +8,7 @@ package com.mycompany.liskovprinciple;
  *
  * @author XPG
  */
-public class UserConfiguration implements PersistentResource {
+public class UserConfiguration implements PersistentResource, Notificable{
     @Override
     public void load() {
         System.out.println("Configuración usuario cargada");
@@ -17,5 +17,9 @@ public class UserConfiguration implements PersistentResource {
     @Override
     public void save() {
         System.out.println("Configuración usuario almacenada");
+    }
+    @Override
+    public void notificar() {
+        System.out.println("Notificación: Configuración de usuario ha sido actualizada.");
     }
 }

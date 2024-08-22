@@ -18,4 +18,6 @@ public class HourlyConfiguration implements PersistentResource {
     public void save() {
         System.out.println("ERROR, la hora no se puede almacenar, es solo de lectura");
     }
+    
+     // No implementa Notificable ya que no es necesario notificar cambios en ConfiguracionHoraria
 }

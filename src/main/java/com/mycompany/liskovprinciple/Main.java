@@ -21,5 +21,9 @@ public class Main {
         // Cargar y guardar las configuraciones
         configuration.chargeConfiguration();
         configuration.saveConfiguration();
+        
+        // Notificar los cambios realizados en las configuraciones que lo soportan
+        configuration.notificarCambios();
+        
     }
 }

@@ -28,4 +28,12 @@ public class Configuration {
             resource.save();
         }
     }
+      
+    public void notificarCambios() {
+        for (PersistentResource resource : conf) {
+            if (resource instanceof Notificable) {
+                ((Notificable) resource).notificar();
+            }
+        }
+    }
 }
